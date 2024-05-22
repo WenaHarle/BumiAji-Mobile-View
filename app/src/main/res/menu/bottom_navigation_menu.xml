@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <item
+        android:id="@+id/latest"
+        android:icon="@drawable/baseline_autorenew_24"
+        android:title="Latest Data" />
+
+    <item
+        android:id="@+id/table"
+        android:icon="@drawable/baseline_dataset_24"
+        android:title="Table" />
+
+    <item
+        android:id="@+id/chart"
+        android:icon="@drawable/baseline_bar_chart_24"
+        android:title="Chart" />
+</menu>
