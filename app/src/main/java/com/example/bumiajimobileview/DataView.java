@@ -10,6 +10,7 @@ import androidx.fragment.app.FragmentTransaction;
 import com.example.bumiajimobileview.databinding.ActivityDataViewBinding;
 import com.example.bumiajimobileview.databinding.ActivityMainBinding;
 
+
 public class DataView extends AppCompatActivity {
         ActivityDataViewBinding binding;
 

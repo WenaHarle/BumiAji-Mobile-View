@@ -7,6 +7,7 @@ android {
     namespace = "com.example.bumiajimobileview"
     compileSdk = 34
 
+
     defaultConfig {
         applicationId = "com.example.bumiajimobileview"
         minSdk = 24
@@ -56,7 +57,12 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-    implementation ("com.android.volley:volley:1.2.1")
-
+    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation ("androidx.recyclerview:recyclerview:1.3.2")
+    implementation ("androidx.cardview:cardview:1.0.0")
+    implementation ("com.github.bumptech.glide:glide:4.12.0")
+    annotationProcessor ("com.github.bumptech.glide:compiler:4.12.0")
+    implementation ("com.squareup.picasso:picasso:2.71828")
 }
 
