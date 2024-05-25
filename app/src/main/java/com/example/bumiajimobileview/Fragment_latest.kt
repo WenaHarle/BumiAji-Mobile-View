@@ -132,9 +132,11 @@ class Fragment_latest : Fragment() {
             timestampTextView.text = comment.timestamp
             machineIdTextView.text = comment.machine_id
             timeUpdateTextView.text = comment.timeupdate
-
+            val newDomain = "rarief.com"
+            val newUrl1 = changeUrl(comment.photo_atas_url, newDomain)
+            val newUrl2 = changeUrl(comment.photo_samping_url, newDomain)
             // Using Picasso to load images
-            Picasso.get().load(comment.photo_atas_url).into(photoAtasImageView, object : com.squareup.picasso.Callback {
+            Picasso.get().load(newUrl1).into(photoAtasImageView, object : com.squareup.picasso.Callback {
                 override fun onSuccess() {
                     // Image loaded successfully
                 }
@@ -146,7 +148,7 @@ class Fragment_latest : Fragment() {
                 }
             })
 
-            Picasso.get().load(comment.photo_samping_url).into(photoSampingImageView, object : com.squareup.picasso.Callback {
+            Picasso.get().load(newUrl2).into(photoSampingImageView, object : com.squareup.picasso.Callback {
                 override fun onSuccess() {
                     // Image loaded successfully
                 }
@@ -169,5 +171,10 @@ class Fragment_latest : Fragment() {
                     putString(ARG_PARAM2, param2)
                 }
             }
+    }
+
+    fun changeUrl(oldUrl: String, newDomain: String): String {
+        val regex = Regex("http://[^/]+/")
+        return oldUrl.replace(regex, "http://$newDomain/")
     }
 }

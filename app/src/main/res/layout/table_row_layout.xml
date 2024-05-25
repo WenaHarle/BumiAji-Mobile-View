@@ -6,10 +6,34 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
     <!-- Add a divider -->
+
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@android:color/darker_gray"/>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/photoAtas"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_weight="1"
+            android:contentDescription="Photo Atas"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/photoSamping"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_weight="1"
+            android:contentDescription="Photo Samping"
+            android:scaleType="centerCrop" />
+    </LinearLayout>
 
     <TextView
         android:id="@+id/text_id"
